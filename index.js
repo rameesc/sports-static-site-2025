@@ -11,6 +11,37 @@ const ourActivity=document.getElementsByClassName("our-activity-imgs")[0]
 const galleryContainer=document.getElementsByClassName("gallery")[0]
 const openInMoble=document.getElementsByClassName("open-in-moble")[0]
 
+const headerItem= document.getElementsByClassName("header-contianer")[0]
+
+const showIcons= document.getElementsByClassName("right-fixed")[0]
+
+const moveToTop=document.getElementsByClassName("top-arrow-btn")[0]
+
+
+
+
+//move to top 
+moveToTop.addEventListener("click",()=>{
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+        
+    })
+})
+
+window.addEventListener("scroll",()=>{
+    
+    if(window.scrollY>500){
+        headerItem.style.position='fixed'
+        showIcons.style.visibility='visible'
+    }else{
+        headerItem.style.position='relative'
+         showIcons.style.visibility='hidden'
+         
+    }
+    console.log(window.screenY)
+})
+
 
 function openMenu(btn){
 
@@ -34,42 +65,66 @@ openMenu(menuBtn)
 const ourPlayersimgValue=[
     {
         id:1,
-        name:"Jubby",
+        name:"Juby Shaly John",
         activity:'Football trainer',
          image:'/assets/images/jubby.jpeg',
-         link :'https://themewagon.github.io/esportsteam/'
+         link :'https://www.instagram.com/juubyy__/'
 
     },
     {
         id:2,
-        name:"Rushthaq",
-        activity:'Boxing trainer',
-         image:'/assets/images/rusthaq.jpg',
-          link :'https://themewagon.github.io/esportsteam/'
+        name:"Mujeeb Rahman",
+        activity:'Karate trainer',
+         image:'/assets/images/MUJEEB-RAHMAN.jpeg',
+          link :'https://www.instagram.com/muji_r_m_/'
 
     },
     {
         id:3,
-        name:"Amjath",
+        name:"Amjad",
         activity:'Swimming trainer',
           image:'/assets/images/amjath.webp',
-           link :'https://themewagon.github.io/esportsteam/'
+           link :'https://www.instagram.com/coach_.amjad/'
 
     },
     {
         id:4,
-        name:"Vishmaya",
+        name:"Vishmaya Vinod p.k",
         activity:'Skating Trainer',
-         image:'/assets/images/player_1.jpg',
-          link :'https://themewagon.github.io/esportsteam/'
+         image:'/assets/images/vishmaya.jpeg',
+          link :'https://www.instagram.com/vismaya__skater/'
 
     },
     {
-        id:4,
-        name:"Anshid Rahman",
+        id:5,
+        name:"Anshid Rahman p",
         activity:'Boxing Trainer',
          image:'/assets/images/anshid.jpeg',
-          link :'https://themewagon.github.io/esportsteam/'
+          link :'https://www.instagram.com/___anshid_rhn__/'
+
+    },
+    {
+        id:6,
+        name:"Karthik c.k",
+        activity:'Gymnasty or parkour Trainer',
+         image:'/assets/images/karthik.jpeg',
+          link :'https://www.instagram.com/mallu_fliper/'
+
+    },
+    {
+        id:7,
+        name:"Safwan Panali",
+        activity:'Football Trainer',
+         image:'/assets/images/SAFWAN-PANALI.jpeg',
+          link :'https://www.instagram.com/safwan_panali/'
+
+    },
+    {
+        id:8,
+        name:"Sumayya k",
+        activity:'Swimming Trainer',
+         image:'/assets/images/img-no.png',
+          link :'https://www.instagram.com/sumayy_a__k/'
 
     },
 ]
@@ -81,31 +136,45 @@ const ourActivityData=[
         item:"Boxing",
        
         image:'/assets/images/boxing.jpeg',
-        link :'https://themewagon.github.io/esportsteam/'
+        link :'https://www.instagram.com/playsmart_sports_academy'
 
     },
     {
-        id:1,
+        id:2,
         item:"Swimming",
        
         image:'/assets/images/gallery7.jpg',
-        link :'https://themewagon.github.io/esportsteam/'
+        link :'https://www.instagram.com/playsmart_sports_academy'
 
     },
     {
-        id:1,
+        id:3,
         item:"Roller Skating",
        
         image:'/assets/images/roller.jpg',
-        link :'https://themewagon.github.io/esportsteam/'
+          link :'https://www.instagram.com/playsmart_sports_academy'
 
     },
     {
-        id:1,
+        id:4,
         item:"FootBall",
        
         image:'/assets/images/football.jpeg',
-        link :'https://themewagon.github.io/esportsteam/'
+          link :'https://www.instagram.com/playsmart_sports_academy'
+    },
+    {
+        id:5,
+        item:"Karate",
+       
+        image:'/assets/images/karate.jpeg',
+          link :'https://www.instagram.com/playsmart_sports_academy'
+    },
+    {
+        id:6,
+        item:"Gymnasty",
+       
+        image:'/assets/images/gymnastic.jpeg',
+          link :'https://www.instagram.com/playsmart_sports_academy'
     },
 ]
 
@@ -358,13 +427,16 @@ const curretPage= window.location.pathname
 
 if(navigation){
     navigation.forEach((link)=>{
+        console.log(curretPage)
+
+        console.log(link.getAttribute("href"))
         
       
         if(link.getAttribute("href")==curretPage){
             link.classList.add("active")
             if(curretPage=='/') return
             window.scrollBy({
-                top:200,
+                top:400,
                 behavior:"smooth"
               })
             

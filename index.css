@@ -36,8 +36,14 @@ body{
     justify-content: center;
     align-items: center;
     padding: 10px 0px 10px 0px;
+    position: relative;
+    top: 0%;
+    z-index: 60;
+    transition: all 1.5s;
+    
 
 }
+
 .header-contianer .sud-header{
    
     display: flex;
@@ -149,6 +155,7 @@ padding: 3px;
     background-size:cover;
     background-attachment: fixed;
     position: relative;
+    z-index: 10;
 
 
     
@@ -164,6 +171,7 @@ padding: 3px;
     position: absolute;
     bottom: 0px;
     left: 0px;
+    z-index: 10;
 
 }
 .hero-sesstion .hero-contect h1{
@@ -513,6 +521,9 @@ padding: 3px;
 .why-choose-us .sub-why-choose-us h1{
     font-size: 50px;
     font-weight: 500;
+   
+    width: 100%;   
+   
 }
 .why-choose-us .sub-why-choose-us .why-choose-items{
     display: flex;
@@ -541,9 +552,59 @@ padding: 3px;
     color: var(--text-gray);
 }
 .why-choose-us .sub-why-choose-us .why-choose-items .image img{
-    width: 50%;
-   height: 250px;
-    object-fit: cover;
+    /* width: 50%; */
+     height: 250px;
+    object-fit: contain;
+}
+
+/* arrow whatsaap icon top arrow */
+.right-fixed{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    bottom: 50px;
+    right: 20px;
+    z-index: 40;
+    visibility:hidden;
+}
+.right-fixed .Whatsapp{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+   
+    
+}
+.right-fixed .Whatsapp:hover,.right-fixed .top-arrow .top-arrow-btn:hover{
+    transform: scale(1.2);
+    transition: all 0.2s;
+
+}
+.right-fixed .Whatsapp i{
+    font-size: 25px;
+    color: var(--text-white);
+}
+.right-fixed .top-arrow .top-arrow-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--back-500);
+    display: flex;
+    justify-content: center;
+    border: none;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--text-white);
+    
+}
+.right-fixed .top-arrow .top-arrow-btn i{
+    color: var(--text-white);
+    font-size: 16px;
 }
 
 @media screen and (max-width:1000px){
@@ -580,8 +641,8 @@ padding: 3px;
        }
        .why-choose-us .sub-why-choose-us .why-choose-items .image img{
         width: 100%;
-       height: 400px;
-        object-fit: cover;
+        /* height: 400px; */
+        object-fit: contain;
     }
     .conatiner{
         width: 90%;

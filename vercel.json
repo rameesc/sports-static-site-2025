@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      { "source": "/", "destination": "/index.html" }
+    ],
+    "redirects": [
+      { "source": "/about", "destination": "/about.html", "permanent": true },
+      { "source": "/activity", "destination": "/activity.html", "permanent": true },
+      { "source": "/contact", "destination": "/contact.html", "permanent": true },
+      { "source": "/gallery", "destination": "/gallery.html", "permanent": true }
+     
+    ]
+  }
+  
