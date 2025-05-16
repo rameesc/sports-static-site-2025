@@ -1,0 +1,130 @@
+
+:root{
+    --back-500:rgba(32, 29, 29, 0.986);
+    --text-gray:rgba(73, 72, 72, 0.986);
+    --text-white:white;
+    --close-btn:brown;
+    --play-border-color:rgb(192, 144, 84);
+    --blue-colore:rgb(7, 9, 97);
+    --yellow-colore:rgb(189, 164, 26);
+
+}
+.contact-page-container{
+    width: 70%;
+   
+}
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0px 80px 0px;
+}
+
+.contact-container .sub-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contact-container .sub-contact h1{
+    font-size: 40px;
+    font-weight: 500;
+}
+.contact-container .sub-contact .social-media{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-container .sub-contact .social-media a{
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    color: var(--back-500);
+}
+.contact-container .sub-contact .social-media a span{
+    font-size: 18px;
+    color: var(--back-500);
+}
+
+/* addrss sesstin */
+.contact-container .sub-contact .location-address{
+    border: 1px solid rgba(0, 0, 0, 0.486);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact-container .sub-contact .location-address h2{
+    font-size: 18px;
+    font-weight: 500;
+}
+.contact-container .sub-contact .location-address p{
+    color: var(--text-gray);
+}
+
+
+/* location */
+
+.location-map{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-container .sub-contact .location-map h1{
+    font-weight: 500;
+    font-size: 30px;
+}
+.contact-container .sub-contact .location-map map{
+    width: 100%;
+    height: 400px;
+}
+
+/* form contact*/
+.contact-container .sub-contact .contact-form{
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    border-radius: 5px;
+    padding: 15px;
+
+}
+.contact-container .sub-contact .contact-form form {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+.contact-container .sub-contact .contact-form form h1{
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.contact-container .sub-contact .contact-form form .form-item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+.contact-container .sub-contact .contact-form form .form-item input{
+    padding: 5px;
+    outline: none;
+    letter-spacing: 1px;   
+}
+.contact-container .sub-contact .contact-form form button{
+    padding: 8px;
+    background-color: black;
+    color: var(--text-white);
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 150px;
+}
+.contact-container .sub-contact .contact-form form button:hover{
+    background-color: rgba(0, 0, 0, 0.829);
+}
+@media screen and (max-width:1000px) {
+    .contact-page-container{
+        width: 90%;
+    }
+}
