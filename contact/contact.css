@@ -46,6 +46,10 @@
     font-size: 18px;
     color: var(--back-500);
 }
+.contact-container .sub-contact .social-media  span{
+    margin-left: 5px;
+    color: black;
+}
 
 /* addrss sesstin */
 .contact-container .sub-contact .location-address{
