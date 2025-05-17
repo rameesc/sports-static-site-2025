@@ -238,7 +238,7 @@ const ourPlayersimgValue=[
         id:8,
         name:"Sumayya k",
         activity:'Swimming Trainer',
-         image:'/assets/images/img-no.png',
+         image:'/assets/images/sumaya.jpeg',
           link :'https://www.instagram.com/sumayy_a__k/'
 
     },
