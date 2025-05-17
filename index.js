@@ -19,7 +19,8 @@ const moveToTop=document.getElementsByClassName("top-arrow-btn")[0]
 
 //header logo conatiner
 const headerLink =document.getElementsByClassName("header-link")[0]
-const navLinkContainer =document.getElementsByClassName("navLink-container")[0]
+const navLinkContainer =document.getElementsByClassName("navLink-container")
+
 
 
 
@@ -105,8 +106,9 @@ const navLink=[
     },
    
 ]
-const createNavLink=()=>{
-
+const createNavLink=(wraping)=>{
+   
+    
     navLink.forEach((nav)=>{
         const aElement = document.createElement("a")
         aElement.className=nav.class
@@ -118,11 +120,19 @@ const createNavLink=()=>{
 
         liElement.appendChild(aElement)
 
-        navLinkContainer.appendChild(liElement)
+      
+        wraping.appendChild(liElement)
+       
+        
+        
+       
     })
+    
    
 }
-createNavLink()
+createNavLink(navLinkContainer[0])
+createNavLink(navLinkContainer[1])
+createNavLink(navLinkContainer[2])
 
 
 //move to top 
