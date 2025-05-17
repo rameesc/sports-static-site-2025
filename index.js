@@ -17,7 +17,112 @@ const showIcons= document.getElementsByClassName("right-fixed")[0]
 
 const moveToTop=document.getElementsByClassName("top-arrow-btn")[0]
 
+//header logo conatiner
+const headerLink =document.getElementsByClassName("header-link")[0]
+const navLinkContainer =document.getElementsByClassName("navLink-container")[0]
 
+
+
+//header img logo
+
+
+
+const createHeaderLogoDetails=()=>{
+
+    const  headreIcon=[{
+        img:'/assets/images/play.png',
+        text:"PLAYSMART",
+        link:'/'
+    }]
+    headreIcon.forEach((h)=>{
+       
+
+        const createDivElement =document.createElement("div")
+         createDivElement.className='header-logo'
+
+        const createImgElement = document.createElement("img")
+        createImgElement.src=h.img
+        createImgElement.alt='img'
+
+        const createH2Element = document.createElement("h2")
+        createH2Element.innerText=h.text
+        
+        
+
+        //wrapp to h2 img into div
+        createDivElement.appendChild(createImgElement)
+        createDivElement.appendChild(createH2Element)
+         
+         
+       
+
+        
+
+        headerLink.appendChild(createDivElement)
+       
+    })
+
+}
+createHeaderLogoDetails()
+
+//create navnar link list
+const navLink=[
+    {
+        link:"/",
+        class:'nav-link',
+        title:"Home",
+        id:1
+    },
+    {
+        link:"/activity/activity.html",
+        class:'nav-link',
+        title:"Activity",
+        id:2
+    },
+    {
+        link:"/gallery/gallery.html",
+        class:'nav-link',
+        title:"Gallery",
+        id:3
+    },
+    {
+        link:"/team/team.html",
+        class:'nav-link',
+        title:"Team",
+        id:4
+    },
+    {
+        link:"/about/about.html",
+        class:'nav-link',
+        title:"About",
+        id:5
+    },
+    {
+        link:"/contact/contact.html",
+        class:'nav-link',
+        title:"Contact",
+        id:6
+    },
+   
+]
+const createNavLink=()=>{
+
+    navLink.forEach((nav)=>{
+        const aElement = document.createElement("a")
+        aElement.className=nav.class
+        aElement.href=nav.link
+        aElement.innerText=nav.title
+
+
+        const liElement = document.createElement("li")
+
+        liElement.appendChild(aElement)
+
+        navLinkContainer.appendChild(liElement)
+    })
+   
+}
+createNavLink()
 
 
 //move to top 
